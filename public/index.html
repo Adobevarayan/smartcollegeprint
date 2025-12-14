@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Smart College Print Management</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- LOGIN / REGISTER -->
+    <div id="auth-area">
+      <h1>Smart College Print Management</h1>
+
+      <div class="card">
+        <h2>Login</h2>
+        <form id="login-form">
+          <label>Email</label>
+          <input type="email" id="login-email" required />
+          <button type="submit">Login</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h2>Register</h2>
+        <form id="register-form">
+          <label>Name</label>
+          <input type="text" id="reg-name" required />
+          <label>Email</label>
+          <input type="email" id="reg-email" required />
+          <label>Department</label>
+          <input type="text" id="reg-dept" required />
+          <button type="submit">Create Account</button>
+        </form>
+      </div>
+
+      <p id="auth-message"></p>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div id="dashboard" class="hidden">
+      <div class="top-bar">
+        <div>
+          <h2 id="user-name"></h2>
+          <p>Role: <span id="user-role"></span></p>
+        </div>
+        <div>
+          Balance: ₹<span id="user-balance"></span>
+          <button id="logout-btn">Logout</button>
+        </div>
+      </div>
+
+      <div class="layout">
+        <div class="card">
+          <h3>New Print Job</h3>
+          <form id="job-form">
+            <label>File name</label>
+            <input type="text" id="file-name" placeholder="Assignment_1.pdf" required />
+
+            <label>Pages</label>
+            <input type="number" id="pages" min="1" value="1" required />
+
+            <label>Copies</label>
+            <input type="number" id="copies" min="1" value="1" required />
+
+            <label>Color mode</label>
+            <select id="color-mode">
+              <option value="bw">Black & White</option>
+              <option value="color">Color</option>
+            </select>
+
+            <label>Paper size</label>
+            <select id="paper-size">
+              <option value="A4">A4</option>
+              <option value="Letter">Letter</option>
+            </select>
+
+            <label>Printer</label>
+            <select id="printer-select"></select>
+
+            <p>Estimated cost: ₹<span id="cost-display">0.00</span></p>
+
+            <button type="submit">Submit Print Job</button>
+          </form>
+          <p id="job-message"></p>
+        </div>
+
+        <div class="card">
+          <h3>My Print Jobs</h3>
+          <table id="jobs-table">
+            <thead>
+              <tr>
+                <th>File</th>
+                <th>Printer</th>
+                <th>Pages</th>
+                <th>Copies</th>
+                <th>Status</th>
+                <th>Cost</th>
+                <th>Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- filled by JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

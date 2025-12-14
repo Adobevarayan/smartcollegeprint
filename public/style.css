@@ -1,0 +1,73 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f5fb;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+}
+
+.card {
+  background: #fff;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+label {
+  display: block;
+  margin-top: 8px;
+}
+
+input, select, button {
+  padding: 6px 8px;
+  margin-top: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 15px;
+}
+
+#jobs-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#jobs-table th, #jobs-table td {
+  border: 1px solid #ddd;
+  padding: 6px;
+  font-size: 14px;
+}
+
+#jobs-table th {
+  background: #eee;
+}
